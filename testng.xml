@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DemoSuite" verbose="5" parallel="methods"
+	thread-count="10">
+
+	<listeners>
+		<listener class-name="utils.ExtentReportListener"></listener>
+	</listeners>
+
+	<test name="DemoTest">
+		<classes>
+			<class name="test.TestCreateUser"></class>
+			<class name="test.TestLoginUser"></class>
+		</classes>
+	</test>
+</suite>
