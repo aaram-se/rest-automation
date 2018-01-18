@@ -6,9 +6,10 @@ import java.util.Random;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 
+import com.monotype.aaram.utils.PropertiesManager;
+
 import api.user.PostUser;
 import pojo.PostUserRequest;
-import utils.PropertiesManager;
 
 /**
  * Created by kohlih on 12-11-2017.
@@ -32,6 +33,7 @@ public class TestCreateUser extends BaseTest {
 
 		PostUser postUser = new PostUser(PropertiesManager.getProperty("baseURI"));
 		postUser.setPostUserRequestBody(postUserRequest);
+		postUser.setContentType("application/json");
 		postUser.setExpectedStatusCode(200);
 
 		postUser.perform();

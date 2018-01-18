@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.BeforeSuite;
 
-import utils.PropertiesManager;
+import com.monotype.aaram.utils.PropertiesManager;
 
 public class BaseTest {
 

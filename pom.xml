@@ -3,8 +3,15 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.l2a</groupId>
-	<artifactId>restassured-testng-template</artifactId>
+	<artifactId>rest-automation</artifactId>
 	<version>1.0</version>
+
+	<repositories>
+		<repository>
+			<id>monotype</id>
+			<url>http://noi-qa-jenkins:8081/nexus/content/repositories/monotype</url>
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<dependency>
@@ -56,6 +63,11 @@
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>18.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.monotype.aaram</groupId>
+			<artifactId>utils</artifactId>
+			<version>0.0.1</version>
 		</dependency>
 
 	</dependencies>

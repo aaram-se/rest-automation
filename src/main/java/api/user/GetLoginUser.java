@@ -42,7 +42,7 @@ public class GetLoginUser extends BaseAPI {
 
 	@Override
 	protected void executeRequest() {
-		apiResponse = given().spec(requestSpecification).post();
+		apiResponse = given().spec(requestSpecification).get();
 	}
 
 	@Override

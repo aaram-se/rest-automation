@@ -3,7 +3,7 @@
 	thread-count="10">
 
 	<listeners>
-		<listener class-name="utils.ExtentReportListener"></listener>
+		<listener class-name="com.monotype.aaram.utils.ExtentReportListener"></listener>
 	</listeners>
 
 	<test name="DemoTest">
