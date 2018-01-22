@@ -2,11 +2,6 @@ package api.user;
 
 import static io.restassured.RestAssured.given;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import com.google.common.base.Joiner;
-
 import api.BaseAPI;
 import pojo.PostUserRequest;
 
@@ -17,12 +12,10 @@ public class PostUser extends BaseAPI {
 
 	String apiPath = "/user";
 	String contentType;
-	Map<String, String> bodyParams;
 	private PostUserRequest postUserRequestBody;
 
 	public PostUser(String baseURI) {
 		super(baseURI);
-		bodyParams = new HashMap<>();
 	}
 
 	public void setContentType(String contentType) {
@@ -31,10 +24,6 @@ public class PostUser extends BaseAPI {
 
 	public void setPostUserRequestBody(PostUserRequest postUserRequestBody) {
 		this.postUserRequestBody = postUserRequestBody;
-	}
-
-	public void addBodyParam(String key, String value) {
-		bodyParams.put(key, value);
 	}
 
 	@Override
