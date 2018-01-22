@@ -3,6 +3,7 @@ package test;
 import java.io.IOException;
 import java.util.HashMap;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.monotype.aaram.utils.CSVAnnotation;
@@ -28,6 +29,9 @@ public class TestLoginUser extends BaseTest {
 		getLoginUser.setExpectedStatusCode(200);
 		getLoginUser.setContentType("application/xml");
 		getLoginUser.perform();
+		String responseStr = getLoginUser.getApiResponseAsString();
+		Assert.assertTrue(responseStr.matches("logged in user session:\\d{13}"),
+				"response does not match, actual : " + responseStr);
 		logger.info("Login successful");
 	}
 }
